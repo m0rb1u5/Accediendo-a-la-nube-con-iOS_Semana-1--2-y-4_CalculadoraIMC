@@ -8,20 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var peso: UITextField!
     @IBOutlet weak var estatura: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        peso.delegate = self
+        estatura.delegate = self
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     @IBAction func calcularIMC(sender: AnyObject) {
         var IMC: Double
         let pesoLocal: Double?
@@ -29,6 +29,13 @@ class ViewController: UIViewController {
         let estaturaLocal: Double = Double(self.estatura.text!)!
         IMC = pesoLocal! / (estaturaLocal*estaturaLocal)
         print("Resultado:\(IMC)")
+    }
+    @IBAction func textFieldDoneEditing(sender: UITextField) {
+        sender.resignFirstResponder() // desaparecer el teclado
+    }
+    @IBAction func backgroundTap(sender: UIControl) {
+        peso.resignFirstResponder()
+        estatura.resignFirstResponder()
     }
 }
 
