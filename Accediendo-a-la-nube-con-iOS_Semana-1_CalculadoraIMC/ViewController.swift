@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var peso: UITextField!
     @IBOutlet weak var estatura: UITextField!
+    @IBOutlet weak var scroll: UIScrollView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func backgroundTap(sender: UIControl) {
         peso.resignFirstResponder()
         estatura.resignFirstResponder()
+    }
+    @IBAction func textFieldDidBeginEditing(textField: UITextField) {
+        var punto: CGPoint
+        punto = CGPointMake(0, textField.frame.origin.y - 50)
+        self.scroll.setContentOffset(punto, animated: true)
+    }
+    @IBAction func textFieldDidEndEditing(textField: UITextField) {
+        self.scroll.setContentOffset(CGPointZero, animated: true)
     }
 }
 
