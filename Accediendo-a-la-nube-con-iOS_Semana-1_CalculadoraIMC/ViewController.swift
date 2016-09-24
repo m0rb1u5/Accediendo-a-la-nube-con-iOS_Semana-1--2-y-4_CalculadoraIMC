@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var peso: UITextField!
+    @IBOutlet weak var estatura: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func calcularIMC(sender: AnyObject) {
+        var IMC: Double
+        let pesoLocal: Double?
+        pesoLocal=Double(self.peso.text!)
+        let estaturaLocal: Double = Double(self.estatura.text!)!
+        IMC = pesoLocal! / (estaturaLocal*estaturaLocal)
+        print("Resultado:\(IMC)")
+    }
 }
 
