@@ -24,12 +24,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func calcularIMC(sender: AnyObject) {
+        imc()
+    }
+    func imc() -> Double {
         var IMC: Double
         let pesoLocal: Double?
         pesoLocal=Double(self.peso.text!)
         let estaturaLocal: Double = Double(self.estatura.text!)!
         IMC = pesoLocal! / (estaturaLocal*estaturaLocal)
         print("Resultado:\(IMC)")
+        return IMC
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let resultado = imc()
+        let sigVista = segue.destinationViewController as! VistaResultados
+        sigVista.indiceIMC = resultado
     }
     @IBAction func textFieldDoneEditing(sender: UITextField) {
         sender.resignFirstResponder() // desaparecer el teclado
