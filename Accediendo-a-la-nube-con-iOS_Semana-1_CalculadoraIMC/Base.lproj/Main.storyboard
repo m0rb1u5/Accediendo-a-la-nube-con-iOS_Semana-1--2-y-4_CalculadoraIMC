@@ -115,10 +115,10 @@
             </objects>
             <point key="canvasLocation" x="1168" y="382"/>
         </scene>
-        <!--View Controller-->
+        <!--Vista Resultados-->
         <scene sceneID="74p-1c-HgA">
             <objects>
-                <viewController id="H3N-bz-ZhN" sceneMemberID="viewController">
+                <viewController id="H3N-bz-ZhN" customClass="VistaResultados" customModule="Accediendo_a_la_nube_con_iOS_Semana_1_CalculadoraIMC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XWd-Rh-BHc"/>
                         <viewControllerLayoutGuide type="bottom" id="iGF-eH-pPn"/>
@@ -133,13 +133,25 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EI1-Ut-mlG">
+                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="EI1-Ut-mlG" firstAttribute="centerY" secondItem="aOI-Qs-vkY" secondAttribute="centerY" id="5aH-ca-uod"/>
                             <constraint firstItem="mJ6-6b-Uiv" firstAttribute="centerX" secondItem="aOI-Qs-vkY" secondAttribute="centerX" id="U7i-9C-Tw2"/>
                             <constraint firstItem="mJ6-6b-Uiv" firstAttribute="top" secondItem="XWd-Rh-BHc" secondAttribute="bottom" constant="77" id="o8M-b0-3jT"/>
+                            <constraint firstItem="EI1-Ut-mlG" firstAttribute="centerX" secondItem="aOI-Qs-vkY" secondAttribute="centerX" id="rBp-7w-O4K"/>
+                            <constraint firstItem="mJ6-6b-Uiv" firstAttribute="centerX" secondItem="aOI-Qs-vkY" secondAttribute="centerX" id="ywE-xd-exG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultadoIMC" destination="EI1-Ut-mlG" id="pJM-Au-g1b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebt-Gp-ObX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

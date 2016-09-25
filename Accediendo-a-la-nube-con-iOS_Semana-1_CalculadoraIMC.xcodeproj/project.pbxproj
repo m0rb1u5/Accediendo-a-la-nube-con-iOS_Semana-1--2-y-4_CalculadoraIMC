@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		948330381D9894E9008EA934 /* VistaResultados.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948330371D9894E9008EA934 /* VistaResultados.swift */; };
 		9488444A1D9688D5007D142F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948844491D9688D5007D142F /* AppDelegate.swift */; };
 		9488444C1D9688D5007D142F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9488444B1D9688D5007D142F /* ViewController.swift */; };
 		9488444F1D9688D5007D142F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9488444D1D9688D5007D142F /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		948330371D9894E9008EA934 /* VistaResultados.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistaResultados.swift; sourceTree = "<group>"; };
 		948844461D9688D5007D142F /* Accediendo-a-la-nube-con-iOS_Semana-1_CalculadoraIMC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Accediendo-a-la-nube-con-iOS_Semana-1_CalculadoraIMC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		948844491D9688D5007D142F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9488444B1D9688D5007D142F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				948844491D9688D5007D142F /* AppDelegate.swift */,
 				9488444B1D9688D5007D142F /* ViewController.swift */,
+				948330371D9894E9008EA934 /* VistaResultados.swift */,
 				9488444D1D9688D5007D142F /* Main.storyboard */,
 				948844501D9688D5007D142F /* Assets.xcassets */,
 				948844521D9688D5007D142F /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			files = (
 				9488444C1D9688D5007D142F /* ViewController.swift in Sources */,
 				9488444A1D9688D5007D142F /* AppDelegate.swift in Sources */,
+				948330381D9894E9008EA934 /* VistaResultados.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +291,7 @@
 				9488445A1D9688D5007D142F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
